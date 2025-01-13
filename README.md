@@ -1,2 +1,2 @@
 # chessai
-Real Time Chess AI (inspired by From Scratch)
+My own tree search chess ai. Futilely battling stockfish endlessly in my dorm on a raspberry pi.
