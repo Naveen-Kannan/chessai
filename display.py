@@ -1,4 +1,3 @@
-# display.py
 import http.server
 import socketserver
 import threading
@@ -33,9 +32,13 @@ def start_server(port=8000):
     <script>
         function refreshBoard() {
             const img = document.getElementById('chess-board');
-            img.src = 'game.svg?' + new Date().getTime();
+            const newImg = new Image();
+            newImg.src = 'game.svg?' + new Date().getTime();
+            newImg.onload = () => {
+                img.src = newImg.src;
+            };
         }
-        setInterval(refreshBoard, 500);
+        setInterval(refreshBoard, 50);
     </script>
 </head>
 <body>
